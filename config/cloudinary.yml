@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hrr2izbmg
+  api_key: '421915617369487'
+  api_secret: J8ktfMaBdEMMvt5yPfJR1vB9wRI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hrr2izbmg
+  api_key: '421915617369487'
+  api_secret: J8ktfMaBdEMMvt5yPfJR1vB9wRI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hrr2izbmg
+  api_key: '421915617369487'
+  api_secret: J8ktfMaBdEMMvt5yPfJR1vB9wRI
+  enhance_image_tag: true
+  static_image_support: false
