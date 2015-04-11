@@ -10,6 +10,13 @@ gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
+# Gems for image uploading
+gem 'cloudinary'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'fog'
+
+
 
 group :production do
 	gem 'pg'
