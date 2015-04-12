@@ -1,3 +1,4 @@
+
 <div class="container">
 
 	<div class="page-header">
@@ -36,4 +37,20 @@
         <p><%= link_to "...adding some personality", edit_user_registration_path, class: 'btn btn-primary' %></p>
 
 </div>
+
+<div class="row">
+	<div class="col-md-8">
+		<h4>Your items:</h4></br>
+		<%= render partial: 'items/item', locals: {item: @item} %>
+	</div>
+</div>
+
+</br>
+<h4>Create a new item:</h4>
+<div class="row">
+	<div class="col-md-8">
+		<%= render partial: 'items/form', locals: { item: @item, user: @user} %>
+	</div>
+</div>
+
 

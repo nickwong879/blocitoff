@@ -7,4 +7,11 @@ def hello
 	render text: "<h1>Hello</h1><p>Welcome home</p>"
 end
 
+private 
+
+def after_sign_out_path_for(current_user)
+        welcome_index_path
+end
+
+
 end
