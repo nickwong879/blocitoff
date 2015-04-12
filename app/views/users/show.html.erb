@@ -32,11 +32,10 @@
 
 <div class="container">
 
-<h4>You can update your profile by...</h4>
-    <div class="form-group">
-        <p><%= link_to "...adding some personality", edit_user_registration_path, class: 'btn btn-primary' %></p>
+	<div class="form-group">
+        <p><span class="glyphicon glyphicon-fire"></span><small> Why not <%= link_to "add some personality", edit_user_registration_path %> to your profile?</small></p>
+    </div>
 
-</div>
 
 <div class="row">
 	<div class="col-md-8">
@@ -46,11 +45,12 @@
 </div>
 
 </br>
-<h4>Create a new item:</h4>
+
 <div class="row">
 	<div class="col-md-8">
-		<%= render partial: 'items/form', locals: { item: @item, user: @user} %>
+		<h4>Create a new item:</h4>
+		<%= render 'items/form' %>
 	</div>
 </div>
-
+</div>
 

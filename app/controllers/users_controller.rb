@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   def show
+  		if current_user
   		@user = current_user
 		@items = @user.items	
+		else
+		redirect_to welcome_index_path
+		end
   end
 
   def update
@@ -13,7 +17,11 @@ class UsersController < ApplicationController
 			redirect_to edit_user_registration_path
 		end
   end
-
+  
+  def index
+    @users = User.all
+    @items = Item.all
+  end
 
 private
 

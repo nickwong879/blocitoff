@@ -29,10 +29,10 @@
 							<li><%= link_to "About", welcome_about_path %></li>
 							<li><%= link_to "Contact", welcome_contact_path %></li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Submenu<span class="caret"></span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Index<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Menu-item 1</a></li>
-									<li><a href="#">Menu-item 2</a></li>
+									<li><%= link_to "Users", @users_index_path %></li>
+									<li><%= link_to "Items", @items_index_path %></li>
 									<li class="divider"></li>
 									<li class="dropdown-header">Sub-submenu</li>
 									<li><a href="#">Menu-item 3</a></li>
