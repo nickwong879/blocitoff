@@ -2,7 +2,11 @@
 
 	<ul class="list-group">
 		<% @items.each do |item| %>
-		<li class="list-group-item"><%= item[:body] %></br><small><small>  Created <%= time_ago_in_words(item.created_at) %> ago by <%= @user[:name] %> </small></small>
+		<li class="list-group-item"><%= item[:body] %>
+		<% if policy(item).destroy? %>
+		| <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+		<% end %>
+		</br><small><small>  Created <%= time_ago_in_words(item.created_at) %> ago by <%= @user[:name] %> </small></small>
 		</li>
 	<% end %>
 	</ul>
