@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 # Faker to support seeding
-gem 'faker'
+#gem 'faker'
 # Adding Devise for authentication
-gem 'devise'
+#gem 'devise'
 # Installing bootstrap
 gem 'bootstrap-sass'
 
@@ -15,6 +15,7 @@ gem 'cloudinary'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog'
+
 
 
 
@@ -39,6 +40,15 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+# Seeding gem
+gem 'faker'
+gem 'devise'
+
+gem 'pundit'
+
+
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

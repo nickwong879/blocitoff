@@ -1,0 +1,11 @@
+		
+
+	<ul class="list-group">
+		<% @items.each do |item| %>
+		<li class="list-group-item"><%= item[:body] %></br><small><small>  Created <%= time_ago_in_words(item.created_at) %> ago by <%= @user[:name] %> </small></small>
+		</li>
+	<% end %>
+	</ul>
+
+
+

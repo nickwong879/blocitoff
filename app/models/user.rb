@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+
+has_many :items
   
 mount_uploader :avatar, AvatarUploader
 
@@ -6,4 +8,13 @@ mount_uploader :avatar, AvatarUploader
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
+
+def admin?
+	role == 'admin'
+end
+
+def moderator?
+	role == 'moderator'
+end
+
 end

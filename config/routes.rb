@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
   
 
+get 'items/create'
+
 get "welcome/index"
 get "welcome/about"
 get "welcome/contact"
+get 'users/index'
+get 'items/index'
 get 'users/show'
 
   devise_for :users
-  resources :users, only: [:update, :show]
+  resources :users, only: [:update, :show, :index] do
+    resources :items, only: [:create, :index]
+  end
+
   
   root to: 'users#show'
 end
