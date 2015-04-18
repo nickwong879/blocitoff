@@ -32,6 +32,7 @@ users = User.all
 		)
 		# set created_at times
 		item.update_attributes!(created_at: rand(10.minutes .. 1.year).ago)
+	#	item.update_attributes!(due_date: rand(10.minutes .. 1.year).ago)
 
 	end
 items = Item.all

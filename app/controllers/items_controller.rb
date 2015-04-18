@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def create
   	@user = current_user
-  	@item = current_user.items.build( item_params )
+  	@item = @user.items.build(item_params)
     @new_item = Item.new
 
   	if @item.save
@@ -10,7 +10,8 @@ class ItemsController < ApplicationController
   	else
   	flash[:notice] = "Error adding item, please try again"
   	end
-
+    
+ 
   end
 
   def destroy
@@ -35,6 +36,7 @@ class ItemsController < ApplicationController
     @users = User.all
     @items = Item.all
   end
+
 
 private
 
