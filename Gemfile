@@ -16,6 +16,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog'
 
+gem 'bootstrap-datepicker-rails'
 
 
 

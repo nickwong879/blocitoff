@@ -12,7 +12,7 @@ get 'users/show'
 
   devise_for :users
   resources :users, only: [:update, :show, :index] do
-    resources :items, only: [:create, :index]
+    resources :items, only: [:create, :index, :destroy]
   end
 
   
