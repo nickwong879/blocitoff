@@ -7,7 +7,8 @@
 		<% if policy(item).destroy? %>
 		| <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
 		<% end %>
-		</br><small><small>  Created <%= time_ago_in_words(item.created_at) %> ago by <%= @user[:name] %> | Due on <%= item.due_date %> | only <%= item.days_left %> days to go!</small></small>
+		</br>
+		<small><small>  Created <%= time_ago_in_words(item.created_at) %> ago by <%= @user[:name] %> | Due on <%= item.due_date.to_date %> | only <%= item.days_left %> days to go!</small></small>
 		</li>
 	<% end %>
 	</ul>
