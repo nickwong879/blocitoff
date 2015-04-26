@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   	@item = @user.items.build(item_params)
     @new_item = Item.new
 
+
   	if @item.save
 		flash[:notice] = "Item added"
     redirect_to users_show_path
@@ -41,7 +42,7 @@ class ItemsController < ApplicationController
 private
 
 def item_params
-  params.require(:item).permit(:body)
+  params.require(:item).permit(:body, :due_date)
 end
 
 end

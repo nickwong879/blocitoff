@@ -5,13 +5,11 @@ class Item < ActiveRecord::Base
 
   default_scope { order('updated_at DESC') }
   
-  def due_date
-  	
-  end
+
 
   def days_left
 
-  	(DateTime.now.to_date - created_at.to_date).to_i
+  	(due_date.to_date - DateTime.now.to_date).to_i
 
   end
 
